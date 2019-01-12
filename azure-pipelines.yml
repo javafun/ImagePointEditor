@@ -32,7 +32,7 @@ steps:
     feedsToUse: 'config'
     nugetConfigPath: 'build/nuget/NuGet.config'
     restoreSolution: 'src/ImagePointEditor/packages.config'
-    restoreDirectory: 'packages'
+    restoreDirectory: '../../packages'
 
 - task: VSBuild@1
   inputs:
