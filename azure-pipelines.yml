@@ -50,4 +50,4 @@ steps:
 - task: PowerShell@2
   inputs:
     #targetType: 'filePath' # Optional. Options: filePath, inline
-    filePath: 'src/build/ZipModule.ps1'
+    filePath: 'build/ZipModule.ps1'
