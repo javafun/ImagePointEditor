@@ -51,3 +51,4 @@ steps:
   inputs:
     #targetType: 'filePath' # Optional. Options: filePath, inline
     filePath: 'build/ZipModule.ps1'
+    workingDirectory: 'build'
