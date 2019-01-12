@@ -17,8 +17,8 @@ pool:
   vmImage: 'VS2017-Win2016'
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
+ # solution: '**/*.sln'
+ # buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
@@ -32,15 +32,15 @@ steps:
     feedsToUse: 'config'
     nugetConfigPath: 'build/nuget/NuGet.config'
     restoreSolution: 'src/ImagePointEditor/packages.config'
-    #solution: 'src/ImagePointEditor/packages.config'
     restoreDirectory: 'packages'
 
-#- task: VSBuild@1
-#  inputs:
-#    solution: '$(solution)'
- #   msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-  #  platform: '$(buildPlatform)'
-   # configuration: '$(buildConfiguration)'
+- task: VSBuild@1
+  inputs:
+    vsVersion: '15.0'
+    solution: 'src/ImagePointEditor/ImagePointEditor.csproj'
+   # msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+    platform: 'AnyCPU'
+    configuration: '$(buildConfiguration)'
 
 #- task: VSTest@2
 #  inputs:
