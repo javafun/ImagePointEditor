@@ -31,8 +31,9 @@ steps:
     command: 'restore'
     feedsToUse: 'config'
     nugetConfigPath: 'build/nuget/NuGet.config'
-    #restoreSolution: 'src/ImagePointEditor/packages.config'
-    solution: 'src/ImagePointEditor/packages.config'
+    restoreSolution: 'src/ImagePointEditor/packages.config'
+    #solution: 'src/ImagePointEditor/packages.config'
+    restoreDirectory: 'packages'
 
 #- task: VSBuild@1
 #  inputs:
